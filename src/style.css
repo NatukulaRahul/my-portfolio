@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #2997ff;
+  --dark: #000000;
+  --dark2: #0a0a0a;
+  --dark3: #111111;
+  --dark4: #1a1a1a;
+  --light: #f5f5f7;
+  --gray: #86868b;
+  --white: #ffffff;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--dark);
+  color: var(--light);
+  overflow-x: hidden;
+}
+
+.app {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 120px 5%;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(36px, 6vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  color: var(--white);
+}
+
+.section-body {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--gray);
+  max-width: 560px;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  section {
+    padding: 80px 5%;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-body {
+    font-size: 15px;
+  }
+
+  /* Navbar */
+  .nav-desktop {
+    display: none !important;
+  }
+
+  /* About grid */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  /* Stats grid */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Skills header */
+  .skills-header {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    margin-bottom: 40px !important;
+  }
+
+  /* Skills grid */
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Projects grid */
+  .projects-header {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: flex-start !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .project-featured {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* WhatIBuild grid */
+  .whatibuild-header {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .whatibuild-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Contact links */
+  .contact-links {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* Footer */
+  .footer-inner {
+    flex-direction: column !important;
+    gap: 8px !important;
+    text-align: center !important;
+  }
+
+  /* Chat window */
+  .chat-window-mobile {
+    width: calc(100vw - 32px) !important;
+    right: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .chat-window-mobile {
+    width: calc(100vw - 48px) !important;
+    max-height: 70vh !important;
+    bottom: 80px !important;
+  }
+}
